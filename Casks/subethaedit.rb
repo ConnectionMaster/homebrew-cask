@@ -1,6 +1,6 @@
 cask "subethaedit" do
-  version "5.1.7,9730"
-  sha256 "4bf6d46dc5c686cd33c2ad8dfa8f2f5e9330ddbde7970afc522d801612f87691"
+  version "5.2.1,9775"
+  sha256 "5129d799e397aca073fbb5d9e38f948d585479ef8538b8ba2a8f020dfa740733"
 
   url "https://subethaedit.net/Releases/SubEthaEdit-#{version.before_comma}.zip"
   name "SubEthaEdit"
@@ -12,6 +12,7 @@ cask "subethaedit" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "SubEthaEdit.app"

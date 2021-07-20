@@ -14,9 +14,12 @@ cask "deeper" do
   elsif MacOS.version <= :mojave
     version "2.4.8"
     sha256 "13dbe7bd680963aca91c40a4fd1e16648b63538f3213692db22dd91a3e3f2c89"
-  else
+  elsif MacOS.version <= :catalina
     version "2.6.0"
     sha256 "302c91c7995364bd02b71613ed440c1480d905637ba02da661cc4e53402643b3"
+  else
+    version "2.6.7"
+    sha256 "b0df372aee8eefb3d83542723e3b37225f23c3a8162eef1744d0035b9e32ca97"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
@@ -33,6 +36,7 @@ cask "deeper" do
     :high_sierra,
     :mojave,
     :catalina,
+    :big_sur,
   ]
 
   app "Deeper.app"

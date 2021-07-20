@@ -1,10 +1,11 @@
 cask "marvin" do
-  version "1.58.0"
-  sha256 "e4da5683f44440ee362f38c548d4e35e882853e109b1383c27b020598444669d"
+  version "1.60.2"
+  sha256 "1603f4e5257bf95996e27d027b42972b4132c92cc95617c3a45821cc14d1d637"
 
   url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg",
       verified: "amazingmarvin.s3.amazonaws.com/"
   name "Amazing Marvin"
+  desc "Personal productivity app"
   homepage "https://www.amazingmarvin.com/"
 
   livecheck do

@@ -1,9 +1,11 @@
 cask "microsoft-teams" do
-  version "1.3.00.33671"
-  sha256 "9e141d6e69a16e9f7a0cfa00d3c7f4217ec7f510d3774b38b46575e6b55c03c0"
+  version "1.4.00.16263"
+  sha256 "9829a06bfb98810f4bca95b70a47cb7cc7f1ab144d8b388f5405020730287656"
 
-  url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
+  url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
+      verified: "statics.teams.cdn.office.net"
   name "Microsoft Teams"
+  desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
 
   livecheck do

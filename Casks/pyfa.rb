@@ -1,12 +1,16 @@
 cask "pyfa" do
-  version "2.33.0"
-  sha256 "c5d3732d70033488da61a48cbed8089f9026bbf578791e79bcb0ed32706bbeb6"
+  version "2.37.0"
+  sha256 "49078e0558e6bdfacead57430fbe3692bed09a88a56fc23d4ab8b8ccac13e375"
 
   url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-v#{version}-mac.zip"
-  appcast "https://github.com/pyfa-org/Pyfa/releases.atom"
   name "pyfa"
   desc "Fitting tool for EVE Online"
   homepage "https://github.com/pyfa-org/Pyfa"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "pyfa.app"
 

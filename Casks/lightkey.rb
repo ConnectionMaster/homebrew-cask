@@ -1,14 +1,21 @@
 cask "lightkey" do
-  version "3.4.3"
-  sha256 "5878e233857b4d68bbc042c0cda2f52491a5e7a12479cddb70d0bc87c71979cc"
+  version "3.7"
+  sha256 "1f9ac9e98b3a07c2feff055a7e0fca4b39a8a5335f90fc23ba13fad024fe3ccc"
 
   url "https://lightkeyapp.com/content/06-download/Lightkey-#{version.dots_to_hyphens}/LightkeyInstaller.zip"
-  appcast "https://lightkeyapp.com/en/downloads"
   name "Lightkey"
   desc "DMX lighting control"
   homepage "https://lightkeyapp.com/"
 
+  livecheck do
+    url "https://lightkeyapp.com/en/download"
+    strategy :header_match do |headers|
+      headers["location"][%r{/Lightkey[._-]v?(\d+(?:-\d+)+)/LightkeyInstaller\.zip}i, 1].tr("-", ".")
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   pkg "LightkeyInstaller.pkg"
 

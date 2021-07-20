@@ -1,6 +1,6 @@
 cask "anydo" do
-  version "4.2.130"
-  sha256 "e3d47c92bcabc1fe053a7fef16790139ea7ff50386f909996367f5af81db667f"
+  version "4.2.155"
+  sha256 "0b8cad20dd1735577948869e07e2f9736f76880242f8e57f7fd1fd72021f8af6"
 
   url "https://electron-app.any.do/Any.do-#{version}.dmg"
   name "Any.do"
@@ -9,11 +9,16 @@ cask "anydo" do
 
   livecheck do
     url "https://electron-app.any.do/latest-mac.yml"
-    strategy :page_match
-    regex(/version: (\d+(?:\.\d+)*)/i)
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :catalina"
 
   app "Any.do.app"
+
+  zap trash: [
+    "~/Library/Application Support/@anydo",
+    "~/Library/Preferences/com.anydo.mac.plist",
+    "~/Library/Saved Application State/com.anydo.mac.savedState",
+  ]
 end

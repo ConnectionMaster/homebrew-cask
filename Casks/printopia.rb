@@ -1,12 +1,17 @@
 cask "printopia" do
-  version "3.0.16"
-  sha256 "871ffce73c734c9c82a6b1fa341d231b0cdef51d5c1b8f1415dfe0414aaf8130"
+  version "3.0.18"
+  sha256 "51de92ead595942ade92c088f30ac2a64756df0fc5abaec2f7f20d9bb1ac2a16"
 
   url "https://download.decisivetactics.com/downloads/printopia/Printopia_#{version}.zip"
-  appcast "https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia"
   name "Printopia"
   desc "Wireless printing to any printer"
   homepage "https://www.decisivetactics.com/products/printopia/"
+
+  livecheck do
+    url "https://www.decisivetactics.com/api/checkupdate?x-app_id=com.decisivetactics.printopia"
+    strategy :page_match
+    regex(%r{/Printopia_(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "Printopia.app"
 

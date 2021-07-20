@@ -1,9 +1,10 @@
 cask "redisinsight" do
-  version "1.9.0"
-  sha256 "4c5e125784229f69dc2a39baf3fb48091ae35101ac12647fd0d7a03e34ddcc6e"
+  version "1.10.1"
+  sha256 "2f6ff3044a75740549fe7bd452cdfbfb1aa6b9c04c3b85a4ab727875d68c4eee"
 
   url "https://downloads.redisinsight.redislabs.com/#{version}/redisinsight-mac.dmg"
   name "RedisInsight"
+  desc "GUI for streamlined Redis application development"
   homepage "https://www.redislabs.com/redisinsight/"
 
   livecheck do

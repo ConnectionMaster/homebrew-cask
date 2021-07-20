@@ -1,14 +1,18 @@
 cask "yuque" do
-  version "0.5.19"
-  sha256 "012c39a8a8b64691fcc431a2b2cb774b1d252d2a81f2169c00ce5c6c0a75da66"
+  version "0.9.10"
+  sha256 "ebb1e92c83966fe66eb16df00c99f1b595222b0cfb12792db410d3dc36e67e31"
 
   url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
-  appcast "https://www.yuque.com/install/desktop"
   name "Yuque"
   name "语雀"
   desc "Cloud knowledge base"
   homepage "https://www.yuque.com/"
+
+  livecheck do
+    url "https://www.yuque.com/yuque/yuque-desktop/changelog"
+    regex(/下载地址(\d+(?:\.\d+)*)/i)
+  end
 
   app "语雀.app"
 

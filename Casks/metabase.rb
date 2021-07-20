@@ -1,10 +1,11 @@
 cask "metabase" do
-  version "0.37.4"
-  sha256 "b2fb5a82c848d75f23e7d88c45ae45eb44dba2f4583c4a35f50b06f09012f775"
+  version "0.40.1"
+  sha256 "1dc8acf5f902de38401b14f705d0a9cc1ce11c594ae6d9f23c278be595673fc7"
 
   url "https://s3.amazonaws.com/downloads.metabase.com/v#{version}/Metabase.zip",
       verified: "s3.amazonaws.com/downloads.metabase.com/"
   name "Metabase"
+  desc "Business intelligence and analytics"
   homepage "https://www.metabase.com/"
 
   livecheck do

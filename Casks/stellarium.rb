@@ -1,10 +1,9 @@
 cask "stellarium" do
-  version "0.20.4"
-  sha256 "ed2c561c0fec34662672e3754aaef59713c041dfef35fe74006459bbb694a42d"
+  version "0.21.1"
+  sha256 "265445ba53f29de4621c021a1e72f7f366e0f397f87edfbaf57dfb1f3ed981aa"
 
   url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}.zip",
       verified: "github.com/Stellarium/stellarium/"
-  appcast "https://github.com/Stellarium/stellarium/releases.atom"
   name "Stellarium"
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"

@@ -1,9 +1,8 @@
 cask "bloodhound" do
-  version "4.0.1"
-  sha256 "ae2f9496b86befa082d8d2c4b714c1ace7399401356e1d9502b3a498d92f2bbc"
+  version "4.0.3"
+  sha256 "d0aa252c1cf8232ad1fe5c59ac94962ba6d0790c333a960d3c757fb9a18f98d8"
 
   url "https://github.com/BloodHoundAD/BloodHound/releases/download/#{version}/BloodHound-darwin-x64.zip"
-  appcast "https://github.com/BloodHoundAD/BloodHound/releases.atom"
   name "bloodhound"
   desc "Six Degrees of Domain Admin"
   homepage "https://github.com/BloodHoundAD/BloodHound"

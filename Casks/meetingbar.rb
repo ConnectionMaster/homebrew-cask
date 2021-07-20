@@ -1,9 +1,8 @@
 cask "meetingbar" do
-  version "2.0.5"
-  sha256 "f3f34bc0e962c39370cca5faaf07e01e627b19fba423552a587e3e661dd7c13c"
+  version "3.6.0"
+  sha256 "15f20177aa3d7fe3a0d1ed7b435f913e7202905f1166368acd88ee8f44fdf2e4"
 
   url "https://github.com/leits/MeetingBar/releases/download/v#{version}/MeetingBar.dmg"
-  appcast "https://github.com/leits/MeetingBar/releases.atom"
   name "MeetingBar"
   desc "Shows the next meeting in the menu bar"
   homepage "https://github.com/leits/MeetingBar"

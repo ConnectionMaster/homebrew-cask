@@ -1,14 +1,14 @@
 cask "expressvpn" do
-  version "10.0.0.252"
-  sha256 "b41ae1d14d05cf4f64f6c3ddf7c0e5f24165d9a51b7cf60ec7ffb5a82669f11d"
+  version "10.3.1.25"
+  sha256 "fe332dd5425a8c149f15be40657a96f4f4db5ae222e1988ee4113b2af3db7396"
 
-  url "https://download.expressvpn.xyz/clients/mac/expressvpn_mac_#{version}_release.pkg"
+  url "https://www.expressvpn.works/clients/mac/expressvpn_mac_#{version}_release.pkg"
   name "ExpressVPN"
   desc "VPN client for secure internet access and private browsing"
-  homepage "https://www.expressvpn.xyz/vpn-software/vpn-mac/"
+  homepage "https://www.expressvpn.works/"
 
   livecheck do
-    url "https://www.expressvpn.xyz/clients/latest/mac"
+    url "https://www.expressvpn.works/clients/latest/mac"
     strategy :header_match
   end
 

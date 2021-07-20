@@ -1,6 +1,6 @@
 cask "jumpshare" do
-  version "2.6.8,92"
-  sha256 "4816bfcbaac413fa9a4f4b07e5a60ecaf7453af0e49f0d746a001996dadc61de"
+  version "2.6.10,100"
+  sha256 "b144cda6f08a5ce9d3a064b7794bc56fc2236062eba14c2a466fa4ce8d2c3113"
 
   url "https://apps.jumpshare.com/desktop/mac/updates/Jumpshare-#{version.before_comma}.tar.bz2"
   name "Jumpshare"

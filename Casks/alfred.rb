@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "4.3.1,1214"
-  sha256 "f8e34028881a54ee6607ca85a22907308c4846de1f0960a8f508094942cabbf2"
+  version "4.3.4,1229"
+  sha256 "71e11aad1e3ac64d775abe2c488e55484c74e0cd144ab028df63aaa52c611ab2"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.before_comma}_#{version.after_comma}.dmg"
   name "Alfred"
@@ -24,6 +24,7 @@ cask "alfred" do
   zap trash: [
     "~/Library/Application Support/Alfred",
     "~/Library/Caches/com.runningwithcrayons.Alfred",
+    "~/Library/Cookies/com.runningwithcrayons.Alfred.binarycookies",
     "~/Library/Preferences/com.runningwithcrayons.Alfred.plist",
     "~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist",
     "~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState",

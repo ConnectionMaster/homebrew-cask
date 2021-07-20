@@ -1,12 +1,16 @@
 cask "pagico" do
-  version "9.7.20201207"
-  sha256 "a2a86af4a81e433854302d12e40dc8df4475a9b0f5fe881742043bbf2d57b140"
+  version "9.10,20210703"
+  sha256 "b24fd60398ab15c0a48eb5354bdb9f9540b38812b45b3153f00c9d922de54d55"
 
-  url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.patch}.dmg"
-  appcast "https://www.pagico.com/api/pagico#{version.major}.mac.xml",
-          must_contain: version.patch
+  url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.after_comma}.dmg"
   name "Pagico"
+  desc "Manage all your tasks, files, and notes"
   homepage "https://www.pagico.com/"
+
+  livecheck do
+    url "https://www.pagico.com/api/pagico#{version.major}.mac.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

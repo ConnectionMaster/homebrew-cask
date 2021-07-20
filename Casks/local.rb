@@ -1,10 +1,10 @@
 cask "local" do
-  version "5.9.8,5191"
-  sha256 "eae46d61925a2256e8fe1c52e3f8581d249d237a9267018e2987173ba86742be"
+  version "6.0.0,5444"
+  sha256 "4dc63efb0e7664e8830fa4aca6d54a5dc01dff2504e16b4e3781ac4eeb72d14d"
 
   url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
   name "Local"
-  desc "WordPress local development tool"
+  desc "WordPress local development tool by Flywheel"
   homepage "https://localwp.com/"
 
   livecheck do
@@ -18,10 +18,9 @@ cask "local" do
   app "Local.app"
 
   zap trash: [
-    "~/Library/Application Support/Local by Flywheel",
-    "~/Library/Logs/local-by-flywheel.log",
-    "~/Library/Preferences/com.getflywheel.local.plist",
-    "~/Library/Preferences/com.getflywheel.local.helper.plist",
-    "~/Library/Saved Application State/com.getflywheel.local.savedState",
+    "~/Library/Application Support/Local",
+    "~/Library/Logs/local-lightning.log",
+    "~/Library/Preferences/com.getflywheel.lightning.local.plist",
+    "~/Library/Saved Application State/com.getflywheel.lightning.local.savedState",
   ]
 end

@@ -1,9 +1,10 @@
 cask "iconjar" do
-  version "2.7.1,46382"
-  sha256 "ec5006c56e433bfe6d10b5e0e7587e696322e92288a965e7f34a1d3b1beb84dd"
+  version "2.8.1,48705"
+  sha256 "1806d0319ea63a669c01c07f4b733c4e27b232b424a159b4288e9f55a0a5e962"
 
   url "https://geticonjar.com/releases/IconJar.app.#{version.after_comma}.zip"
   name "IconJar"
+  desc "Icon organizer"
   homepage "https://geticonjar.com/"
 
   livecheck do

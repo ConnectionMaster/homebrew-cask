@@ -1,6 +1,6 @@
 cask "timing" do
-  version "2021.2,277"
-  sha256 "d6520bf9b1ae1fa317f6551f5cdf8347f84d92c9370363ff663cac4e23bcec1d"
+  version "2021.4.3,298"
+  sha256 "3e789cd9ff7b7af85020903bb7287e273efb4c83116e2abb319a72bc30f6694d"
 
   url "https://updates.timingapp.com/download/Timing-#{version.before_comma}.dmg"
   name "Timing"
@@ -9,11 +9,12 @@ cask "timing" do
   homepage "https://timingapp.com/"
 
   livecheck do
-    url "https://timingapp.com/updates/timing2.xml"
+    url "https://updates.timingapp.com/updates/timing2.xml"
     strategy :sparkle
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Timing.app"
 

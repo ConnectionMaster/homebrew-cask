@@ -1,11 +1,16 @@
 cask "simplenote" do
-  version "2.5.0"
-  sha256 "2260bdc35c11f2b85914bebb67e39d703e689195ac1267c9d22cd12a0ddabc25"
+  version "2.14.0"
+  sha256 "48ec0be2e47d23cebc68775ce6bb6b64e07447f67a26d0b1f318e3fbfd41949c"
 
   url "https://github.com/Automattic/simplenote-electron/releases/download/v#{version}/Simplenote-macOS-#{version}.dmg"
-  appcast "https://github.com/Automattic/simplenote-electron/releases.atom"
   name "Simplenote"
+  desc "React client for Simplenote"
   homepage "https://github.com/Automattic/simplenote-electron"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Simplenote.app"
 

@@ -1,13 +1,22 @@
 cask "oracle-jdk" do
-  version "15.0.2,7:0d1cfde4252546c6931946de8db48ee2"
-  sha256 "106313be17b977df3da05a168b9449b41fd52858a3d18cc3fac5c8d9279d06a8"
+  version "16.0.1,9:7147401fd7354114ac51ef3e1328291f"
+  sha256 "7ab227e36916c4beda068edda0f0a8a8ab0c3cddf837489d7bf9cea2f23a50a2"
 
   url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}+#{version.after_comma.before_colon}/#{version.after_colon}/jdk-#{version.before_comma}_osx-x64_bin.dmg",
       cookies: {
         "oraclelicense" => "accept-securebackup-cookie",
       }
   name "Oracle Java Standard Edition Development Kit"
+  desc "JDK from Oracle"
   homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
+
+  livecheck do
+    url "https://www.oracle.com/java/technologies/javase-jdk16-downloads.html"
+    strategy :page_match do |page|
+      match = page.match(%r{(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)/(.+)/jdk-(\d+(?:\.\d+)*)_osx-x64_bin\.dmg}i)
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   depends_on macos: ">= :yosemite"
 

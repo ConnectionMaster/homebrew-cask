@@ -1,10 +1,9 @@
 cask "spatterlight" do
-  version "0.5.5"
-  sha256 "0893a6cc4f2403334df53c8e01588db57aec08296b03202b31424ee0af3100a7"
+  version "0.8.4"
+  sha256 "0cf60e8a94c0c5a57ee1d3296b919a6b5afb73e3a3fe9213968e8cde2e83bbaa"
 
-  url "https://github.com/angstsmurf/spatterlight/releases/download/v#{version}/Spatterlight_Catalina.zip",
+  url "https://github.com/angstsmurf/spatterlight/releases/download/v#{version}/Spatterlight.zip",
       verified: "github.com/angstsmurf/spatterlight/"
-  appcast "https://github.com/angstsmurf/spatterlight/releases.atom"
   name "Spatterlight"
   desc "Play most kinds of interactive fiction game files"
   homepage "http://ccxvii.net/spatterlight/"
@@ -12,4 +11,14 @@ cask "spatterlight" do
   depends_on macos: ">= :catalina"
 
   app "Spatterlight.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.ccxvii.spatterlight.SpatterlightQuickLook",
+    "~/Library/Application Scripts/net.ccxvii.spatterlight.SpatterlightThumbnailer",
+    "~/Library/Application Scripts/net.ccxvii.spatterlight.iFictionQuickLook",
+    "~/Library/Containers/net.ccxvii.spatterlight.SpatterlightQuickLook",
+    "~/Library/Containers/net.ccxvii.spatterlight.SpatterlightThumbnailer",
+    "~/Library/Containers/net.ccxvii.spatterlight.iFictionQuickLook",
+    "~/Library/Preferences/net.ccxvii.spatterlight.plist",
+  ]
 end

@@ -1,13 +1,19 @@
 cask "setapp" do
-  version "2.7.15,1608219081"
-  sha256 "b5ab580ef30d48b0f981f1fdf57a91028598f8b9b0c7b2e31ae3e8692f848080"
+  version "2.9.12,1626434072"
+  sha256 "c36bd202fd1e75ca0eb3156425badf2e7daf2822a97a83b285479e6e7aa15d2e"
 
   url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip",
       verified: "devmate.com/com.setapp.InstallSetapp/"
-  appcast "https://updates.devmate.com/com.setapp.InstallSetapp.xml"
   name "Setapp"
   desc "Collection of apps available by subscription"
   homepage "https://setapp.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.setapp.InstallSetapp.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.url[%r{/(\d+)/InstallSetapp-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

@@ -4,10 +4,16 @@ cask "boop" do
 
   url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip",
       verified: "github.com/IvanMathy/Boop/"
-  appcast "https://github.com/IvanMathy/Boop/releases.atom"
   name "Boop"
   desc "Scriptable scratchpad for developers"
   homepage "https://boop.okat.best/"
+
+  livecheck do
+    url "https://boop.okat.best/version.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["standalone"]["version"]
+    end
+  end
 
   depends_on macos: ">= :mojave"
 

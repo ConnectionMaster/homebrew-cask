@@ -1,12 +1,15 @@
 cask "radicle-upstream" do
-  version "0.1.8"
-  sha256 "67106de5b6186075bf4da03ba7fb48bf3fc0d63f52f34f65da5ecc31ce70acae"
+  version "0.2.8"
+  sha256 "7ca35cea099b4f1df4dc87c20b7dfb2725e5395b39f33269e836e70a6b589cf1"
 
   url "https://releases.radicle.xyz/radicle-upstream-#{version}.dmg"
-  appcast "https://github.com/radicle-dev/radicle-upstream/releases.atom"
   name "Radicle Upstream"
   desc "Desktop client for Radicle, a p2p stack for code collaboration"
   homepage "https://radicle.xyz/"
+
+  livecheck do
+    url "https://github.com/radicle-dev/radicle-upstream"
+  end
 
   depends_on macos: ">= :mojave"
 

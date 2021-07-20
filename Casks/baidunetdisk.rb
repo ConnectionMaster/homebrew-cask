@@ -1,14 +1,18 @@
 cask "baidunetdisk" do
-  version "3.6.4"
-  sha256 "b8ee4fe07d8110bdc6d8578308ba3cfb08756ad21cc4c4bc439b864e88d90a5d"
+  version "3.8.2"
+  sha256 "982bee9edad0fd45dd2025793b1cf50872850af52ca644816393afef71efd7a3"
 
   url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
       verified: "baidupcs.com/issue/netdisk/MACguanjia/"
-  appcast "https://pan.baidu.com/disk/cmsdata?do=client"
   name "Baidu NetDisk"
   name "百度网盘"
   desc "Cloud storage service"
   homepage "https://pan.baidu.com/download"
+
+  livecheck do
+    url "https://pan.baidu.com/disk/cmsdata?do=client"
+    regex(/BaiduNetdisk[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   depends_on macos: ">= :yosemite"
 

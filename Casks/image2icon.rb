@@ -1,12 +1,12 @@
 cask "image2icon" do
-  version "2.13,881"
-  sha256 "3c78ac194973c90763a19799ba12c0ebdb421479404861fcc7738fbe631a92a3"
+  version "2.15,921"
+  sha256 "f6ddb22e27cf722438676e86cd039e28327af069d5fc71f7af6d4dcb0dc74e12"
 
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version.before_comma}.zip",
       verified: "sf-applications.s3.amazonaws.com/Image2Icon/"
   name "Image2Icon"
   desc "Icon creator and file and folder customizer"
-  homepage "http://www.img2icnsapp.com/"
+  homepage "https://www.img2icnsapp.com/"
 
   livecheck do
     url "http://apps.shinynode.com/apps/image2icon_appcast.xml"
